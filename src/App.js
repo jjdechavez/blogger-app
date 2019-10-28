@@ -1,6 +1,4 @@
 import React from 'react';
-
-import BgNavbar from './components/BgNavbar';
 import './App.css';
 
 function App() {
@@ -22,6 +20,7 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="bg-white"></div>
         <div className="img-carousel"></div>
         <div className="headline">
           <div className="headline-grid">

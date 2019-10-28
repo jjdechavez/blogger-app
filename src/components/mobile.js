@@ -1,5 +1,6 @@
 import React from 'react';
 import './mobile.css';
+import Image from '../landing-page-girl.png';
 
 function App() {
   return (
@@ -21,7 +22,9 @@ function App() {
           </div>
         </div>
         <div className="bg-white"></div>
-        <div className="img-carousel"></div>
+        <div className="img-carousel">
+          {/* <img className="img-item" src="./img/landing-page-girl.png" alt=""/> */}
+        </div>
         <div className="headline-container">
           <div className="headline-grid">
             <div className="badge">

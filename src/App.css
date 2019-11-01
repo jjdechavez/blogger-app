@@ -243,6 +243,7 @@ p {
 
   .header-container {
     width: 100vw;
+    /* margin-top: .50em; */
   }
 
   .navbar-menu {

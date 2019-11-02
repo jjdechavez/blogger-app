@@ -14,13 +14,18 @@ p {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .grid-container {
   width: 100%;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
 
 .bg-black {
@@ -375,3 +380,10 @@ p {
     font-size: 1rem;
   }
 } 
+
+/* Blog */
+.blog-container {
+  background-color: aqua;
+  grid-column: 2/6;
+  grid-row: 2/7;
+}

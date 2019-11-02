@@ -1,10 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Navbar() {
   return (
     <header className="header-container">
       <div className="navbar-brand">
-        <p className="navbar-title">Blog</p>
+        <Link to="/">
+          <p className="navbar-title">Blog</p>
+        </Link>
       </div>
       <div className="navbar-menu">
         <svg className="menu-item d-none-desktop" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">

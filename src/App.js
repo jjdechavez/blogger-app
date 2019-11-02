@@ -1,8 +1,11 @@
 import React from 'react';
+import {Switch, Route} from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Social from './components/Social';
-import Headline from './components/Headline';
+import Home from './components/Home/';
+import BlogList from './components/BlogList';
+
 import './App.css'
 
 function App() {
@@ -13,10 +16,10 @@ function App() {
           <Navbar />
         </div>
         <div className="bg-white"></div>
-        <div className="img-carousel">
-        </div>
-        <Headline />
-        <Social />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/blog" component={BlogList} />
+        </Switch>
         <Footer />
       </div>
     </div>

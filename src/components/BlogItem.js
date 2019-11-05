@@ -4,6 +4,7 @@ function BlogItem() {
   return (
     <>
       <div className="item-container">
+        <div className="feature-img d-none-mobile"></div>
         <div className="item-grid">
           <h5 className="about-title">Count Octagon</h5>
           <p className="about-author">Friz Knuckle</p>

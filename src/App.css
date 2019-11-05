@@ -169,10 +169,11 @@ a {
 
 .blog-grid {
   width: 120%;
-  height: fit-content;
+  /* height: auto; */
   transform: translateX(-8%);
   display: grid;
   grid-template-columns: 1fr;
+  /* grid-template-rows: 1fr 5em; */
   /* grid-template-rows: 1fr repeat(3, 5em); */
   /* grid-template-columns: repeat(4, 1fr); */
   /* grid-template-rows: repeat(5, 1fr); */
@@ -237,7 +238,7 @@ a {
 .item-container3 {
   /* grid-column: 1/5; */
   /* grid-row: 3/4; */
-  height: 65%;
+  /* min-height: 65%; */
   border: 1px solid #b5b5b5;
 }
 

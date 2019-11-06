@@ -5,7 +5,7 @@ import BlogItem from './BlogItem';
 function BlogList() {
   return (
     <>
-      <div className="blog-container blog-grid">
+      <div className="blog-container">
         <BlogFeature />
         <BlogItem />
       </div>

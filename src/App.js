@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home/';
 import BlogList from './components/BlogList';
+import {AddBlogForm} from './components/BlogForm';
 
 import './App.css'
 
@@ -19,6 +20,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/blog" component={BlogList} />
+          <Route path="/add-blog-form" component={AddBlogForm} />
         </Switch>
         <Footer />
       </div>

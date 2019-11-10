@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import { blogDatas } from './data';
+import { blogDatas, detailBlog } from './data';
 import uuid from 'uuid/v1';
 
 const blogReducer = (state, action) => {
@@ -21,16 +21,6 @@ const blogReducer = (state, action) => {
         }]
       }
     case 'SET_BLOG':
-      // const getId = state.blogs.filter(blog => blog.id === action.blog.id);
-      // const getBlog = {
-      //   id: action.blog.id,
-      //   title: action.blog.title,
-      //   author: action.blog.author,
-      //   blog: action.blog.blog,
-      //   date: action.blog.date
-      // }
-      // console.log(getId, getBlog);
-
       return {
         ...state,
         viewDetail: true,
@@ -59,9 +49,9 @@ function BlogContextProvider(props) {
   const dark = {bg: '#1A1A1A', syntax: '#fff'};
   const light = {bg: '#fff', syntax: '#000'};
 
-  const initialState = { blogs: blogDatas, currentBlog: initialFormState, viewDetail: false, dark, light };
+  const initialState = { blogs: blogDatas, currentBlog: detailBlog, viewDetail: false, dark, light };
   const [state, dispatch] = useReducer(blogReducer, initialState);
-  // console.log(state.blog)
+
   return (
     <BlogContext.Provider value={{ state, dispatch }}>
       {props.children}
@@ -70,4 +60,3 @@ function BlogContextProvider(props) {
 }
 
 export default BlogContextProvider;
-

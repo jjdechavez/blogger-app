@@ -85,7 +85,7 @@ img {
   width: 100%;
   grid-column: 2/6;
   grid-row: 2/4;
-  background: url('./girl2.jpg') no-repeat;
+  background: url('./hamu.jpg') no-repeat;
   background-size: contain;
   background-position: center;
 }
@@ -408,6 +408,10 @@ textarea:focus {
     justify-content: center;
     align-items: center;
   }
+
+  .blog-detail {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (min-width: 680px) {
@@ -586,6 +590,20 @@ textarea:focus {
   .btn-save,
   .btn-cancel {
     width: 10%;
+  }
+
+  .detail-container {
+    background-color: #fff;
+    box-shadow: 7px 7px 12px 0px rgba(0,0,0,0.4);
+    border-radius: .50em;
+  }
+
+  .header-title {
+    color: #000;
+  }
+
+  .m-top {
+    margin-top: 1em;
   }
 
 }

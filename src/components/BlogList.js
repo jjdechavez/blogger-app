@@ -25,7 +25,9 @@ function BlogItem({blog}) {
     <>
       <Link to="/detail" className="link-blog">
         <div className="item-container" onClick={() => dispatch({type: 'SET_BLOG', blog})}>
-          <div className="feature-img d-none-mobile"></div>
+          <div className="feature-img d-none-mobile">
+            <img src={blog.image} className="feature-main-img" alt={blog.title} />
+          </div>
           <div className="item-grid">
             <h5 className="item-title about-title">{blog.title}</h5>
             <p className="item-author about-author">{blog.author}</p>

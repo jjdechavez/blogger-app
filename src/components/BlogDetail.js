@@ -6,8 +6,14 @@ const BlogDetail = () => {
   return (
     <>
       <div className="detail-container">
-        <h1>{currentBlog.title}</h1>
-        <p>{currentBlog.author}</p>
+        <div className="header-detail">
+          <h1 className="header-title">{currentBlog.title}</h1>
+          <div className="about-detail">
+            <p className="header-author">by: {currentBlog.author}</p>
+            <p className="header-date">{currentBlog.date}</p>
+          </div>
+        </div>
+        <div className="blog-detail">{currentBlog.blog}</div>
       </div>
     </>
   )

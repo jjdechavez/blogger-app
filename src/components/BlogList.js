@@ -1,4 +1,5 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { BlogContext } from '../BlogContext';
 
 function BlogFeature({feature}) {
@@ -19,16 +20,19 @@ function BlogFeature({feature}) {
 }
 
 function BlogItem({blog}) {
+  const {dispatch} = useContext(BlogContext);
   return (
     <>
-      <div className="item-container">
-        <div className="feature-img d-none-mobile"></div>
-        <div className="item-grid">
-          <h5 className="item-title about-title">{blog.title}</h5>
-          <p className="item-author about-author">{blog.author}</p>
-          <p className="item-date about-date">{blog.date}</p>
+      <Link to="/detail" className="link-blog">
+        <div className="item-container" onClick={() => dispatch({type: 'SET_BLOG', blog})}>
+          <div className="feature-img d-none-mobile"></div>
+          <div className="item-grid">
+            <h5 className="item-title about-title">{blog.title}</h5>
+            <p className="item-author about-author">{blog.author}</p>
+            <p className="item-date about-date">{blog.date}</p>
+          </div>
         </div>
-      </div>
+      </Link>
     </>
   )
 }
@@ -39,7 +43,7 @@ function BlogList() {
     <>
       <div className="blog-container">
         {blogs.sort((a,b) => new Date(b.date) - new Date(a.date))
-          .map((feature, index) => index < 1 ? <BlogFeature feature={feature} /> : null)
+          .map((feature, index) => index < 1 ? <BlogFeature key={feature.id} feature={feature} /> : null)
         }
         <div className="blog-grid">
           {blogs.map(blogItem => {

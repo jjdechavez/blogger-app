@@ -20,6 +20,33 @@ const blogReducer = (state, action) => {
           date: dateData
         }]
       }
+    case 'SET_BLOG':
+      // const getId = state.blogs.filter(blog => blog.id === action.blog.id);
+      // const getBlog = {
+      //   id: action.blog.id,
+      //   title: action.blog.title,
+      //   author: action.blog.author,
+      //   blog: action.blog.blog,
+      //   date: action.blog.date
+      // }
+      // console.log(getId, getBlog);
+
+      return {
+        ...state,
+        viewDetail: true,
+        currentBlog: {
+          id: action.blog.id,
+          title: action.blog.title,
+          author: action.blog.author,
+          blog: action.blog.blog,
+          date: action.blog.date
+        }
+      }
+    case 'BACK_TO_LAST_PAGE':
+      return {
+        ...state,
+        viewDetail: false
+      }
     default:
       return state
   }
@@ -28,7 +55,11 @@ const blogReducer = (state, action) => {
 export const BlogContext = createContext();
 
 function BlogContextProvider(props) {
-  const initialState = { blogs: blogDatas }
+  const initialFormState = {id: null, title: '', author: '', blog: '', date: null};
+  const dark = {bg: '#1A1A1A', syntax: '#fff'};
+  const light = {bg: '#fff', syntax: '#000'};
+
+  const initialState = { blogs: blogDatas, currentBlog: initialFormState, viewDetail: false, dark, light };
   const [state, dispatch] = useReducer(blogReducer, initialState);
   // console.log(state.blog)
   return (

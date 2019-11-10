@@ -6,7 +6,7 @@ function Navbar() {
     <header className="header-container">
       <div className="navbar-brand">
         <Link to="/">
-          <p className="navbar-title">Blog</p>
+          <p className="navbar-title">Blog IT</p>
         </Link>
       </div>
       <div className="navbar-menu">

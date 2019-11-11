@@ -40,7 +40,7 @@ export const blogDatas = [
 export const detailBlog = [
   {
     id: 1,
-    title: 'Huma Island, Palawan ',
+    title: 'Huma Island, Palawan',
     author: 'Maris Chick',
     blog: 'Want to take a break from the crowded cities and places to visit in the Philippines? Then, spend a luxurious getaway at the Human Island Resort – a heavenly refuge full of indulgence and adventure. Majestically cradled in the stunning turquoise waters of Palawan, this one-of-a-kind Maldivian-like resort beckons weary people who are longing for a tropical escape and a personalized zen-like experience of exploration and discovery. Blending world-class facilities and cushy accommodations with mouthwatering dishes and fun-filled adventures, this remote island certainly has an array of treats in store for its guests.',
     date: 'Jul 2019',

@@ -6,7 +6,7 @@ const blogReducer = (state, action) => {
   switch (action.type) {
     case 'ADD_BLOG':
       const newDate = new Date();
-      const nameMonth = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec");
+      const nameMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
       const dateData = nameMonth[newDate.getMonth()] + ' ' + newDate.getFullYear();
 
